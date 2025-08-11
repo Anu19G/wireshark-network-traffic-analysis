@@ -5,7 +5,7 @@
 This project demonstrates a complete workflow for capturing, analyzing, and interpreting network traffic using **Wireshark**.  
 It was developed as part of an internship task to showcase skills in packet capture, protocol analysis, filtering, and troubleshooting.
 
-🔗 **[Read the Full Task Overview](TaskOverview.md)**
+🔗 **[Read the Full Task Overview](TaskOverview)**
 
 ---
 
