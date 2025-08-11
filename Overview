@@ -1,0 +1,81 @@
+# Overview 
+
+## Introduction
+This project demonstrates the complete process of capturing, analyzing, and interpreting network traffic using **Wireshark**.  
+It was a part of an internship task with the objective of showcasing practical skills in packet analysis, protocol identification, and network troubleshooting.
+
+The task is focuses on:
+- Installing and configuring Wireshark with Npcap
+- Capturing live packet data from an active network interface
+- Identifying and breaking down key protocols
+- Applying targeted filters for focused analysis
+- Detecting potential anomalies or issues in network communication
+
+---
+
+## Objectives
+1. Install and set up **Wireshark** with the necessary packet capture drivers.
+2. Perform a short-duration live packet capture during real network activity.
+3. Save the capture in a structured format for analysis.
+4. Identify major protocols (e.g., QUIC, TCP, UDP, DNS) and their traffic share.
+5. Apply filters to isolate specific traffic for deeper inspection.
+6. Document findings, including normal behavior and any anomalies.
+
+---
+
+## Key Steps Performed
+
+### 1. Installation & Setup
+- Installed Wireshark with Npcap on a Windows system.
+- Enabled **WinPcap API compatibility** for broader tool support.
+- Verified network interfaces (Wi-Fi/Ethernet) for capture readiness.
+
+### 2. Packet Capture
+- Selected active network interface.
+- Captured ~6,500 packets over 1–2 minutes while browsing websites and using online services.
+- Saved capture as `Network_capture.pcapng`.
+
+### 3. Protocol Identification
+- Used **Protocol Hierarchy** to break down traffic:
+  - QUIC: 46.35% (HTTP/3 over UDP)
+  - UDP: 66.65%
+  - TCP: 25.87%
+  - DNS, TLS, IGMP, ARP in smaller volumes
+- Noted QUIC as the dominant secure transport protocol in this session.
+
+### 4. Targeted Filtering & Troubleshooting
+- **QUIC Traffic:** Identified Initial, Handshake, and ACK packets; verified server IPs (Google services).
+- **DNS Traffic:** Confirmed successful name resolution; no failed lookups.
+- **TCP Anomalies:** Found duplicate ACKs and out-of-order packets, suggesting possible Wi-Fi interference.
+- **Non-Standard Port Check:** No unexpected port usage detected.
+
+---
+
+## Outcome
+The analysis confirmed:
+- The monitored device primarily communicates over **secure, encrypted channels** (HTTPS over QUIC/TCP).
+- All DNS queries resolved successfully without errors.
+- Minor TCP anomalies detected but likely caused by environmental factors rather than malicious activity.
+- No suspicious traffic or unauthorized port usage observed.
+
+---
+
+## Skills Demonstrated
+- Packet Capture & Filtering in Wireshark
+- Protocol Analysis (QUIC, TCP, UDP, DNS, TLS)
+- Network Troubleshooting Techniques
+- Secure Handling of Network Data
+- Structured Documentation of Findings
+
+---
+
+## Ethical Considerations
+- Capture performed on an authorized, controlled network.
+- No sensitive or personal data stored.
+- Analysis limited to metadata and encrypted protocol headers.
+
+---
+
+## Conclusion
+This task highlights practical network analysis skills essential for cybersecurity, network administration, and performance monitoring.  
+It demonstrates the ability to interpret raw packet data, identify communication patterns, and ensure secure, efficient network operation.
